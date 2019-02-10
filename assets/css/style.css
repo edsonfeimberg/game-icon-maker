@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f2f6ff;
+}
+
+header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 40px;
+    height: 55px;
+}
+
+.cover-selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cover-placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 350px;
+    background-color:#d4d7d9;
+}
+
+.instruction{
+    color: white;
+}
+
+.controlls{
+    margin: 20px;
+}
+
+
