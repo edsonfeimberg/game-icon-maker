@@ -1,3 +1,23 @@
+<?php
+
+require 'classes/images.php';
+
+$a= new images();
+
+
+if(isset($_FILES['image'])){
+    $image= $_FILES['image'];
+
+    $a->uploadImage($image);
+
+}
+
+
+?>
+
+
+
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -28,12 +48,17 @@
             </div>
 
             <div class="controlls">
+
+            <form method="POST" enctype="multipart/form-data">
            
-            <input type="file">
+            <input type="file" name="image">
 
             </div>
 
-            <button class="upload-button" type="submit">Upload</button>
+            <input class="upload-button" value="Upload" type="submit">
+
+        </form>
+        
         </div>
 
 
