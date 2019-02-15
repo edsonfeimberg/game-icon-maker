@@ -11,14 +11,14 @@ class images {
 
         if(in_array($tipo, array('image/jpeg', 'image/png'))){
 
-            $tempname= rand(0, 9999).'jpg';
+            $tempname= rand(0, 9999).'png';
             move_uploaded_file($image['tmp_name'], 'assets/images/'.$tempname);
 
             list($width_orig, $height_orig) = getimagesize('assets/images/'.$tempname);
             $ratio= $width_orig/$height_orig;
 
-            $width=640;
-            $height=908;
+            $width=340;
+            $height=480;
 
             if($width/$height > $ratio){
                 $width= $height*$ratio;
@@ -27,7 +27,7 @@ class images {
             }
 
 
-            $img= imagecreatetruecolor($width, $height);
+            $img= imagecreatefrompng('assets/images/testecase.png');
             if($tipo== 'image/jpeg'){
                 $origi= imagecreatefromjpeg('assets/images/'.$tempname);
             }elseif($tipo=='image/png'){
